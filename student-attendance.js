@@ -10,7 +10,7 @@ function getAttendanceTableData(student) {
   db.collection('users').doc(student).get().then((doc) => {
     if (doc.exists) {
       console.log(doc.data());
-      currentStudentData = doc.data();
+      const currentStudentData = doc.data();
       const datesAttended = doc.data().datesAttended
       console.log(datesAttended)
 

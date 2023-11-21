@@ -31,13 +31,13 @@ const firebaseConfig = {
   //   })
   // }
 
-  let currentStudentData;
+  //let currentStudentData;
 
   function getStudentData(student) {
     db.collection('users').doc(student).get().then((doc) => {
       if (doc.exists) {
         console.log(doc.data());
-        currentStudentData = doc.data();
+       // currentStudentData = doc.data();
       } else {
         console.log('No such document!');
       }
@@ -130,4 +130,4 @@ function updateDocument(student, dateAttended) {
 
 
 
-  //window.onload = getAllDataOnce;
+  

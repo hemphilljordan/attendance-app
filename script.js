@@ -1,4 +1,6 @@
-
+const backBtn = document.getElementById('back-home')
+const yesBtn = document.getElementById('yes-btn')
+yesBtn.style.display = "block"
 
 
 //console.log(jason)
@@ -53,11 +55,6 @@ dropdowns.forEach(dropdown => {
 
       // Store the stringified data in sessionStorage under the key 'chosenStudent'
       sessionStorage.setItem('chosenStudent', chosenStudentString);
-
-
-      // sendData('/getStudent', {
-      //   name: chosenStudent
-      // })
       getStudentData(chosenStudent)
       didStudentAttendPage(option.innerText)
     })
@@ -90,30 +87,45 @@ function didStudentAttendPage(student) {
   // console.log(currentStudent)
 }
 
-console.log(formattedDate)
+
+const changeDateButton = document.getElementById('change-btn')
+changeDateButton.addEventListener('click', () => {
+  window.location.href = 'fix-date.html'
+})
+
+
+
 
 
 //  CONFIRM POPUP MENU FOR STUDENT ATTENDANCE
 
 function confirmAttendance(student) {
-  //localStorage.setItem('selectedStudent', student);
-
   const newAttendance = {
     date: dataDateFormat,
     paid: false
   }
 
   updateDocument(student, newAttendance)
-  // currentStudentData.datesAttended.unshift(newAttendance);
-  // console.log(currentStudentData)
-  //sessionStorage.setItem('studentData', JSON.stringify(currentStudentData));
-  window.location.href = 'students-attendance-sheet.html'
+
+  yesBtn.style.display = 'none'
+  backBtn.textContent = 'Go To Student'
+  document.getElementById('is-student-header').textContent = ''
+  document.getElementById('current-date').textContent = ''
+  window.location.href = '#m1-c'; 
 }
 
-const changeDateButton = document.getElementById('change-btn')
-changeDateButton.addEventListener('click', () => {
-  window.location.href = 'fix-date.html'
-})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
