@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="students-attendance-sheet.css">
+  <link rel="stylesheet" href="is-student.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <h1 class="student-name"></h1>
+      <h2>ATTENDANCE</h2>
+    </div>
+
+    <table id="attendance-table">
+    </table>
+
+    <div class="home-btn">
+      <a href="index.html" class="modal__btn" id="home-btn">HOME</a>
+    </div>
+  </div>
+
+  <div class="is-student-in-attendance">
+    <h1>PAID?</h1>
+    <h1 class="student-name"></h1>
+    <h1 id="paid-date"></h1>
+    <a href="#m1-o" class="link-1" id="m1-c">YES</a>
+    <a href="students-attendance-sheet.html" class="link-1" id="back-home">NO</a>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <script src="date-variables.js"></script>
+  <script src="student-database.js"></script>
+  <script src="student-attendance.js"></script>
+</body>
+
+</html>

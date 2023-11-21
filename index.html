@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="is-student.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <div class="dropdown">
+    <div class="select">
+      <span class="selected">Student</span>
+      <div class="caret"></div>
+    </div>
+    <ul class="menu">
+    </ul>
+  </div>
+
+
+
+
+  <div class="is-student-in-attendance">
+    <h1>IS STUDENT IN ATTENDANCE?</h1>
+    <h1 class="student-name"></h1>
+    <h1 id="current-date"></h1>
+    <a href="#m1-o" class="link-1" id="m1-c">YES</a>
+    <a href="students-attendance-sheet.html" class="link-1" id="back-home">NO</a>
+
+
+    <div class="modal-container" id="m1-o" style="--m-background: transparent;">
+      <div class="modal">
+        <h1 class="modal__title">ARE YOU SURE?</h1>
+        <p class="modal__text"></p>
+        <button class="modal__btn" id="confirm-btn">Yes!</button>
+        <button class="modal__btn" id="change-btn">Change Date &rarr;</button>
+        <a href="#m1-c" class="link-2"></a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <script src="date-variables.js"></script>
+  <script src="student-database.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
